@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const destinationHandler = require("./destinationHandler")
 
+router.get("/warmup", destinationHandler.warmup)
 router.get("/moon", destinationHandler.getMoon);
 router.get("/mars", destinationHandler.getMars);
 router.get("/europa", destinationHandler.getEuropa);
